@@ -67,12 +67,15 @@ if (this.isEdit==true) {
     });
   }
   pushData(){
-    this.data.cards.unshift({
-      id: 1,
-      img:  "./assets/Screenshot 2023-10-15 081136.png",
-      subtitle  :  this.addForm.value.title,
-      title :  this.addForm.value.desc,
-      url  :   "/survey/how-many-car-you-have-in-your-family"    })
+    this.dataSouce.forEach(x=>{
+      this.data.cards.unshift({
+        id: 1,
+        img:  "./assets/Screenshot 2023-10-15 081136.png",
+        subtitle  :  x.desc,
+        title :  x.title,
+        url  :   "/survey/how-many-car-you-have-in-your-family"    })
+    })
+ 
 
       this.router.navigate(['/']);
   }
