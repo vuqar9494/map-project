@@ -1,17 +1,18 @@
 .footer{
+    padding-left: 10px;
     height: 50px;
     display: flex;
     justify-content: space-between;
     margin-bottom: -30px!important;
     .email{ width: 20%;
     display: flex; align-items: center;}
-    .menu{width: 23%;}
-    .copy{width: 20%;  display: flex; align-items: center;}
+    .menu{ margin:10px; width: 23%;}
+    .copy{width: 20%;  display: flex; align-items: center; justify-content: end; padding-right: 10px;}
     .menu{
         display: flex;
         justify-content: space-between;
         align-items: center;
-       
+        
       
     
         a{
@@ -20,7 +21,9 @@
            
         }
     }
-
+    .copy,.email,.menu{
+        font-size: 12px;
+    }
 
 
     @media screen and (max-width: 881px) {
