@@ -26,12 +26,12 @@ body.dark-mode {
         border-radius:3px;margin-left:2px; 
     }
     .footer{background-color:$headdarkColor}
-  #map,  th,  textarea,input,select,.new, .pagination{background-color: $darkColor;  color: #dfe6e9;}
+ .c2,.c1, #map,  th,  textarea,input,select,.new, .pagination{background-color: $darkColor;  color: #dfe6e9;}
   }
   
   body.light-mode {
     background-color: $lightColor;
-    #map,th, textarea,input,select,.new, .pagination{background-color: $lightColor;
+    .c2,.c1, #map,th, textarea,input,select,.new, .pagination{background-color: $lightColor;
         border: #242829;
        color: #2d3436;
     }
