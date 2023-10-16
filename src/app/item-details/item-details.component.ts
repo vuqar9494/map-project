@@ -56,7 +56,7 @@ export class ItemDetailsComponent implements AfterViewInit,OnInit {
 
 
   getpie(){
-    this.data.getpie('./../../assets/data/3-item-view/all-pie-chart.json').subscribe((x)=>{
+    this.data.getpie('3-item-view/all-pie-chart.json').subscribe((x)=>{
       //console.log(x);
       this.pie=x
         this.pieChartLabels = this.pie.data.map(x=>{return x.label});
@@ -70,7 +70,7 @@ export class ItemDetailsComponent implements AfterViewInit,OnInit {
 
 
   gettable(){
-    this.data.getpie('./../../assets/data/3-item-view/list-of-results.json').subscribe((x)=>{
+    this.data.getpie('3-item-view/list-of-results.json').subscribe((x)=>{
     //  console.log(x);
       this.AllData=x
    
@@ -96,7 +96,7 @@ export class ItemDetailsComponent implements AfterViewInit,OnInit {
   }
 
   getbarasc(){
-    this.data.getpie('./../../assets/data/3-item-view/top-10-ascending.json').subscribe((x)=>{
+    this.data.getpie('3-item-view/top-10-ascending.json').subscribe((x)=>{
      // console.log(x);
       this.barasc=x;
       this.barChartData=
@@ -118,7 +118,7 @@ export class ItemDetailsComponent implements AfterViewInit,OnInit {
 
 
   getbardsc(){
-    this.data.getpie('./../../assets/data/3-item-view/top-10-desc.json').subscribe((x)=>{
+    this.data.getpie('3-item-view/top-10-desc.json').subscribe((x)=>{
    //   console.log(x);
       this.bardsc=x;
       this.barChartDataD=
