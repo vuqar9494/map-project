@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+@import "node_modules/ol/ol.css";
+$darkColor:#242829;
+$lightColor: #a7b6bc;
+
+$headdarkColor:#3e4648;
+$headlightColor: #c0d0d6;
+
+body,
+html
+{
+    box-sizing: border-box;
+    margin: 0!important;
+    padding: 0!important;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body.dark-mode {
+    background-color: $darkColor;
+    color: #dfe6e9;
+    a{
+        color:  #dfe6e9;
+    }
+    .header-container{background-color:$headdarkColor ;}
+    .icon{background-color:$darkColor;
+        border-radius:3px;margin-left:2px; 
+    }
+    .footer{background-color:$headdarkColor}
+  #map,  th,  textarea,input,select,.new, .pagination{background-color: $darkColor;  color: #dfe6e9;}
+  }
+  
+  body.light-mode {
+    background-color: $lightColor;
+    #map,th, textarea,input,select,.new, .pagination{background-color: $lightColor;
+        border: #242829;
+       color: #2d3436;
+    }
+    color: #2d3436;
+    a{
+        color: #2d3436;
+    }
+    .header-container{background-color:$headlightColor ;}
+    .icon{background-color:$lightColor;
+        border-radius:3px;margin-left:2px; 
+    }
+    .footer{background-color:$headlightColor}
+  }
+
+  .right::-webkit-scrollbar {
+    color: aliceblue;
+    width: 5px;
+background-color: #191c1d!important;
+ }

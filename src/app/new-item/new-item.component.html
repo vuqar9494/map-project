@@ -1,0 +1,48 @@
+<div *ngIf="form" class="new">
+    <div [formGroup]="addForm"  class="left">
+
+ <div class="title"> {{form.title}}</div>
+<ng-container *ngFor="let x of form?.fields">
+ <label for="">{{x.label}}</label>
+<input [formControlName]="x.field"  [placeholder]="x.placeholder" *ngIf="x.type=='input-text'" [type]="'text'">
+
+<textarea [formControlName]="x.field"  [placeholder]="x.placeholder" style="height: 40px;" *ngIf="x.type=='textarea'" name="" id="" cols="30" rows="5"></textarea>
+
+<select [formControlName]="x.field"   *ngIf="x.type=='select'" name="" id="">
+    <option value="">Option List</option>
+    <option *ngFor="let y of x.data" [value]="y.value">{{y.label}}</option>
+</select>
+
+<div style="display: flex; justify-content: space-between" *ngIf="x.type=='SpecialComponent1'">
+    <input [formControlName]="x.field"  placeholder="Write Answers" style="width:56% ;" [type]="'text'">
+    <input formControlName="color" #color style=" opacity: 0; ;width: 0;" [type]="'color'">
+    <button class="color"  (click)="color.click()" style="width:20% ;  "  >color</button>
+    <button [disabled]="addForm.invalid" (click)="add()" style="width:20% ; "  >Add list</button>
+    
+</div>
+</ng-container>
+
+<table  cellspacing="0" cellpadding="0">
+    <tr>
+<th [width]="'20%'">color</th>
+<th [width]="'60%'" style="text-align: start;">Answers</th>
+<th [width]="'20%'">Operation</th>
+    </tr>
+    
+    <tr *ngFor="let xx of dataSouce" >
+        <td [style.color]="xx.color">{{xx.color}}</td>
+        <td>{{xx.answers}}</td>
+        <td> 
+<button  style="width: 17px; margin: 0 2px; height: 20px; background-color: rgb(27, 27, 27);"><img style="width: 9px; margin-left: -2px;" src="../../assets/pencil_orange.svg" alt=""></button>
+<button style="width: 17px; margin: 0 2px; height: 20px;background-color: rgb(27, 27, 27);"><img style="width: 9px; margin-left: -2px;" src="../../assets/red-bin.svg" alt=""></button>
+        </td>
+    </tr>
+</table>
+<div style="position:relative">
+    <button [disabled]="addForm.invalid" (click)="pushData()" style="width:50px ;  position: absolute;top:5px;  right: 5px;"  >Save</button>
+</div>
+
+    </div >
+
+    <div class="right">  <app-map style="width: 100%; height: 100%;"></app-map></div>
+</div>

@@ -1,0 +1,28 @@
+<div *ngIf="setting && user" class="header-container">
+    <div routerLink="/" class="logo">
+        <img [src]="setting.logo" alt="">
+        <span class="logo-text" >{{setting.logo_title}}</span>
+    </div>
+    <div class="menu-list">
+        
+                <a *ngFor="let m of menu" [routerLink]="m.path">{{m.label}}</a>
+        
+    </div>
+    <div class="user">
+        <div class="icons">
+           <div class="icon"><i style="font-size: 14px; padding:5px ;" class='fa fa-bell'></i></div>
+           <div class="icon"><i style="font-size: 14px; padding:5px ;" class='fa fa-bell'></i></div>
+           <app-dark-mode-toggle></app-dark-mode-toggle>
+        </div>
+       <div class="detail">
+        <div class="names">
+<span style="font-weight: 400;">{{user.name}}</span>
+<span  style="font-size: 15px;">{{'Vote:'+user.vote+ ' Survey:'+user.survey}}</span>
+        </div>
+        <div class="img">
+            <i style=" padding-right: 5px;" class='fa fa-angle-down'></i>
+            <img [src]="user.img" alt="">
+        </div>
+       </div>
+    </div>
+</div>

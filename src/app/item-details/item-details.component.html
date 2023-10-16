@@ -1,0 +1,60 @@
+<div class="detail">
+    <div class="left">
+     
+        <app-map style="width: 100%; height: 100%;"></app-map>
+    </div>
+    
+    <div class="right">
+
+        <div *ngIf="bardsc" class="title">
+       <div>  {{bardsc.title}} </div>  
+       <canvas class="c2"   baseChart
+       [data]="barChartDataD"
+       [options]="barChartOptions"
+       [plugins]="barChartPlugins"
+       [legend]="barChartLegend"
+       [type]="'bar'">
+</canvas>
+    </div>
+    <div *ngIf="barasc" class="title">
+        <div>  {{barasc.title}} </div>  
+        <canvas class="c2"   baseChart
+              [data]="barChartData"
+              [options]="barChartOptions"
+              [plugins]="barChartPlugins"
+              [legend]="barChartLegend"
+           
+              [type]="'bar'">
+      </canvas>
+     </div>
+     <div *ngIf="pie" class="title">
+        <div>  {{pie.title}} </div>  
+         <canvas class="c1" baseChart
+         [type]="'pie'"
+         [datasets]="pieChartDatasets"
+         [labels]="pieChartLabels"
+         [options]="pieChartOptions"
+         [plugins]="pieChartPlugins"
+         [legend]="pieChartLegend">
+       </canvas>
+     </div>
+
+    
+        <div *ngIf="AllData">  {{AllData.title}} </div>  
+       
+<div   class="title">
+      <table  >
+        <tr >
+            <th [style.width]="h.field=='answer' ? '300px':''  " *ngFor="let h of AllData?.columns">{{h.title}}</th>
+        </tr>
+        <tr *ngFor="let d of AllData?.data">
+           <td>{{d.id}}</td>
+           <td>{{d.label}}</td>
+           <td >{{d.answer}}</td>
+        </tr>
+
+      </table>
+    </div>
+
+  
+</div>

@@ -1,0 +1,9 @@
+<div *ngIf="setting" class="footer">
+    <div class="email">
+        Mail {{setting.mail}}
+    </div>
+    <div class="menu">
+        <a *ngFor="let m of menu" [routerLink]="m.path">{{m.label}}</a>
+    </div>
+    <div class="copy">{{setting.copyright}}</div>
+</div>

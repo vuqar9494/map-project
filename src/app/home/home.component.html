@@ -1,0 +1,35 @@
+<div class="home"   infiniteScroll
+[infiniteScrollDistance]="1"
+(scrolled)="onScroll()"
+[scrollWindow]="false">
+    <div 
+   
+    class="cards">
+        <div [routerLink]="'/new'"  class="card">
+            <img src="../../assets/plus.png" alt="" class="card-img">
+          
+    
+        </div>
+
+    <div [routerLink]="'/detail'" [queryParams]="{id:card.id}" class="card" *ngFor="let card of tempCard">
+        <img [src]="card.img" alt="" class="card-img">
+        <div class="card-top">
+            <span>Vote: 32131</span>
+        </div>
+<div class="card-desc">
+    <div class="leftside">
+        <div style=" font-size: 10px; font-weight: 700;  ">{{card.title}}</div>
+        <div style=" font-size: 9px; margin-top: 4px;">{{card?.subtitle?.substring(0,30)}}...</div>
+    </div>
+    <div class="rightside">
+      <i  style="color: red;" class='fa fa-bell icon'></i>
+      <i  class='fa fa-bell icon'></i>
+      <i style="color: rgb(0, 162, 255);"  class='fa fa-bell icon'></i>
+    </div>
+
+</div>
+    </div>
+    
+</div>
+</div>
+<div class="pagination"></div>
