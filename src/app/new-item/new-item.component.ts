@@ -10,9 +10,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./new-item.component.scss']
 })
 export class NewItemComponent {
+  id:number=1;
   addForm: FormGroup;
 dataSouce=[]
   form:any
+  isEdit: boolean=false;
   constructor(
     private data:DataService,
     public fb: FormBuilder,
@@ -20,7 +22,8 @@ dataSouce=[]
     ){
 
       this.addForm = this.fb.group({
-      color:[,]
+      id:[this.id,],
+      color:[,Validators.required]
    
       });
       this.getForm()
@@ -34,8 +37,19 @@ dataSouce=[]
   
   }
 add(){
- // console.log(this.addForm.value);
+ console.log(this.isEdit,this.addForm.value.id);
+ 
+if (this.isEdit==true) {
+  console.log(this.addForm.value.id);
+  this.dataSouce =this.dataSouce.filter(x=>x.id!=this.addForm.value.id);
+}
+ 
   this.dataSouce.push(this.addForm.value)
+  this.addForm.reset();
+  this.id++
+  this.addForm.get('id').setValue(this.id)
+  this.isEdit=false
+
 }
    getForm(){
  
@@ -62,5 +76,22 @@ add(){
 
       this.router.navigate(['/']);
   }
+delete(id){
+  console.log(id);
+  
+  this.dataSouce =this.dataSouce.filter(x=>x.id!=id);
 
+}
+edit(id){
+  this.isEdit=true;
+  let data =this.dataSouce.find(x=>x.id==id);
+this.addForm.get('color').setValue(data.color)
+this.addForm.get('title').setValue(data.title)
+this.addForm.get('select2').setValue(data.select2)
+this.addForm.get('select1').setValue(data.select1)
+this.addForm.get('desc').setValue(data.desc)
+this.addForm.get('answers').setValue(data.answers)
+this.addForm.get('id').setValue(data.id)
+
+}
 }
