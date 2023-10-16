@@ -7,8 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'map-project';
-  onScroll(){
-    //console.log(scroll);
-    
-  }
+//ng build --output-path docs --base-href /map-project/
 }

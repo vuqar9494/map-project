@@ -11,7 +11,6 @@ import { ItemDetailsComponent } from './item-details/item-details.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DarkModeToggle } from './dark-mood/dark-mood.component';
 import { DARK_MODE_OPTIONS } from 'angular-dark-mode';
-import { ChartComponent } from './chart/chart.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { NgChartsModule } from 'ng2-charts';
@@ -26,7 +25,6 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     NewItemComponent,
     ItemDetailsComponent,
     DarkModeToggle,
-    ChartComponent,
     MapComponent
   ],
   imports: [
