@@ -1,12 +1,17 @@
-<div *ngIf="setting && user" class="header-container">
+<div *ngIf="setting && user" class="  header-container" >
+    <a style="font-size: 16px!important;" href="javascript:void(0);" class="iconss" (click)="myFunction()">
+        <i class="fa fa-bars"></i></a>
+    <div class="topnav" id="myTopnav">
     <div routerLink="/" class="logo">
         <img [src]="setting.logo" alt="">
         <span class="logo-text" >{{setting.logo_title}}</span>
     </div>
-    <div class="menu-list">
+    <div class="menu-list " >
         
-                <a *ngFor="let m of menu" [routerLink]="m.path">{{m.label}}</a>
-        
+                <a *ngFor="let m of menu" [routerLink]="'/'">{{m.label}}</a>
+              
+
+
     </div>
     <div class="user">
         <div class="icons">
@@ -25,4 +30,5 @@
         </div>
        </div>
     </div>
+</div>
 </div>

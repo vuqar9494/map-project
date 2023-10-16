@@ -1,8 +1,6 @@
 .header-container {
-   
-    display: flex;
-    justify-content: space-between;
     height: 50px;
+   
     .logo{
         width: 200px;
         display: flex;
@@ -13,9 +11,12 @@
         }
      
     }
+
+    
 .logo-text{
     margin-left: 10px;
 }
+
 
     .user{
         justify-content: space-between;
@@ -64,3 +65,78 @@ align-items: center;
         height: 30px;
     }}
 }
+.topnav{display: flex;
+    justify-content: space-between;
+    height: 50px;}
+.header-container .iconss {
+    display: none;
+  }
+
+@media screen and (max-width: 881px) {
+
+
+    .topnav  {display: none;}
+    .header-container  .iconss {
+      float: right;
+      display: block;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
+     
+  .topnav {
+    transition:all 0.3s;
+   
+  }
+
+
+    .responsive {position: relative!important;
+      ;  }
+     .iconss {
+      float: none;
+      display: block!important;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      z-index: 2;
+    }
+    .responsive  {
+      float: none;
+      display: flex!important;
+      flex-direction: column;
+      
+      z-index: 1;
+      text-align: left;
+      position: absolute;
+     padding-right: 5px;
+     font-size: 11px;
+     background-color: #353839;
+     height: 100px;
+     .menu-list{
+        display: flex;flex-direction: column;
+        align-items:end ;
+        width:97% ;
+        padding-right: 15px;
+    }
+    .logo{
+        position: absolute;
+        top: 0;
+    }
+    .user{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top:50px;
+        left: 0 ;
+        align-items: end;
+        width: 75%;
+    .detail{
+        margin-top: 20px;
+    }
+    }
+    }
+    .responsive  {
+       padding-top: 40px;
+     
+      }
+    }

@@ -16,6 +16,9 @@ html
 }
 
 body.dark-mode {
+    .responsive{
+        background-color:#2d2e2f;;
+    }
     background-color: $darkColor;
     color: #dfe6e9;
     a{
@@ -30,8 +33,11 @@ body.dark-mode {
   }
   
   body.light-mode {
+    .responsive{
+        background-color:#e3e3e3;
+    }
     background-color: $lightColor;
-    .c2,.c1, #map,th, textarea,input,select,.new, .pagination{background-color: $lightColor;
+     .c2,.c1, #map,th, textarea,input,select,.new, .pagination{background-color: $lightColor;
         border: #242829;
        color: #2d3436;
     }
@@ -51,3 +57,34 @@ body.dark-mode {
     width: 5px;
 background-color: #191c1d!important;
  }
+
+ @media screen and (max-width: 584px) {
+ 
+ 
+ 
+    button,input
+    {
+      margin-left: 5px;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 13px;
+      background-color: #0756a5;
+      color: #fff;
+      height: 40px;
+      width: 130px;
+      border-radius: 5px;
+      border: none;
+      box-shadow: 1px 3px 3px #999;
+    }
+     .c1{
+       margin-top: 20px!important;
+       height: 180px!important;
+       width:180px!important;
+    }
+ 
+    .c2{
+       margin-top: 40px!important;
+       height: 100px!important;
+       width:200px!important;
+    }
+  }

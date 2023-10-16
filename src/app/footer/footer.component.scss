@@ -20,4 +20,12 @@
            
         }
     }
+
+
+
+    @media screen and (max-width: 881px) {
+        .copy,.email,.menu{
+            font-size: 9px;
+        }
+    }
 }

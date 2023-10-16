@@ -13,7 +13,7 @@ export class DataService {
    
    }
 
-  dataUrl='./../assets/data/';
+  dataUrl='./assets/data/';
 
 cards=[]
 
