@@ -16,7 +16,7 @@ html
 }
 
 body.dark-mode {
-    .responsive{
+    .c2,.c1, .responsive{
         background-color:#2d2e2f;;
     }
     background-color: $darkColor;
@@ -29,15 +29,15 @@ body.dark-mode {
         border-radius:3px;margin-left:2px; 
     }
     .footer{background-color:$headdarkColor}
- .c2,.c1, #map,  th,  textarea,input,select,.new, .pagination{background-color: $darkColor;  color: #dfe6e9;}
+  #map,  th,  textarea,input,select,.new, .pagination{background-color: $darkColor;  color: #dfe6e9;}
   }
   
   body.light-mode {
-    .responsive{
+    .c2,.c1,  .responsive{
         background-color:#e3e3e3;
     }
     background-color: $lightColor;
-     .c2,.c1, #map,th, textarea,input,select,.new, .pagination{background-color: $lightColor;
+      #map,th, textarea,input,select,.new, .pagination{background-color: $lightColor;
         border: #242829;
        color: #2d3436;
     }
