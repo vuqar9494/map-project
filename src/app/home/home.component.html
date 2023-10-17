@@ -5,10 +5,10 @@
     <div 
    
     class="cards">
-        <div [routerLink]="'/new'"  class="card">
-            <img src="./assets/plus.png" alt="" class="card-img">
-          
-    
+        <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;" [routerLink]="'/new'"  class="card add-card">
+           
+            <i class="fa fa-plus" style="font-size: 35px; font-weight:1;"></i>
+    <div  style="width: 100%; text-align: center;">Add New Survay</div>
         </div>
 
     <div [routerLink]="'/detail'" [queryParams]="{id:card.id}" class="card" *ngFor="let card of tempCard">
